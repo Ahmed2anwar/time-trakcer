@@ -1,0 +1,60 @@
+<section class="home">
+  <div id="parent " class="container" style="margin-top: 100px">
+    <div id="" class="gird1">
+      <div class="card-id">
+        <div class="card-info">
+          <div class="id-img">
+            <img
+              src="../../../assets/Bitmap.png"
+              alt="id-img"
+            />
+          </div>
+          <div class="card-titls">
+            <h6>Report for</h6>
+            <h4>
+              Best <br />
+              Sales
+            </h4>
+          </div>
+        </div>
+        <div class="card-filter">
+          <div class="card-info">
+            <ul>
+              <li>daily</li>
+              <li class="weekly">weekly</li>
+              <li>monthly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="" class="gird" *ngFor="let product of products">
+      <div class="product"  >
+        <div class="product-before" [style.background-color]="getRandomColor()"></div>
+        <div
+          class="product-cat"
+
+        >
+          <h5>{{product.category}}</h5>
+          <span>...</span>
+        </div>
+        <p class="price">{{product.price}}$</p>
+        <div
+          class=""
+          style="
+            padding-right: 14px;
+            display: flex;
+            justify-content: space-between;
+          "
+        >
+          <h4>{{product.title}}</h4>
+          <h6>
+            inStore
+            <p style="text-align: center">{{product.rating.count}}</p>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
